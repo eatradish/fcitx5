@@ -343,7 +343,7 @@ std::pair<unsigned int, unsigned int> InputWindow::sizeHint() {
 
         if (vertical) {
             wholeH += candidateH;
-            updateIfLarger(wholeW, candidateW);
+            updateIfLarger(wholeW, candidateH);
         } else {
             wholeW += candidateW;
             updateIfLarger(wholeH, candidateH);
