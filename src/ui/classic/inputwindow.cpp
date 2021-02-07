@@ -331,7 +331,7 @@ std::pair<unsigned int, unsigned int> InputWindow::sizeHint() {
         size_t candidateW = 0, candidateH = 0;
         if (pango_layout_get_character_count(labelLayouts_[i].get())) {
             pango_layout_get_pixel_size(labelLayouts_[i].get(), &w, &h);
-            candidateW += w;
+            candidateW += h;
             updateIfLarger(candidateH, std::max(minH, h) + extraH);
         }
         if (pango_layout_get_character_count(candidateLayouts_[i].get())) {
